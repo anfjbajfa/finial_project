@@ -38,7 +38,7 @@ export default function LeafletMap() {
   useEffect(() => {
     const fetchDorms = async () => {
       try {
-        const res = await fetch(`http://${ip}:3000/getdorminfo`);
+        const res = await fetch(`http://${ip}:80/getdorminfo`);
         const json = await res.json();
         if (json.success) {
           const validDorms = json.data.filter(
@@ -118,9 +118,9 @@ export default function LeafletMap() {
             </View>
 
             <ScrollView style={styles.panelContent}>
-              {selectedDorm.pictures && (
+              {selectedDorm.picture && (
                 <ScrollView horizontal style={{ marginTop: 12 }}>
-                  {selectedDorm.pictures.split(',').map((url, i) => (
+                  {selectedDorm.picture.split(',').map((url, i) => (
                     <Image key={i} source={{ uri: url.trim() }} style={styles.photo} resizeMode="cover" />
                   ))}
                 </ScrollView>

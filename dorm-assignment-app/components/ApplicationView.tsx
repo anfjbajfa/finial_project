@@ -51,8 +51,8 @@ export default function ApplicationView({ onSelect }: Props) {
       try {
         const endpoint =
           role === "admin"
-            ? `http://${ip}:3000/authorized/admin/getapplications`
-            : `http://${ip}:3000/authorized/student/getapplications/${studentId}`;
+            ? `http://${ip}:80/authorized/admin/getapplications`
+            : `http://${ip}:80/authorized/student/getapplications/${studentId}`;
 
         const res = await fetch(endpoint, {
           headers: { Authorization: `Bearer ${token}` },
@@ -86,7 +86,7 @@ export default function ApplicationView({ onSelect }: Props) {
         onPress: async () => {
           try {
             const res = await fetch(
-              `http://${ip}:3000/authorized/student/delete`,
+              `http://${ip}:80/authorized/student/delete`,
               {
                 method: "POST",
                 headers: {

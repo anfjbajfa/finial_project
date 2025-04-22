@@ -5,7 +5,7 @@ const querydorminfo = `
     h.lng,
     h.gender_inclusive,
     h.infrastructure,
-    h.pictures,
+    h.picture,
     json_agg(
       json_build_object(
         'room_id', r.id,
@@ -15,7 +15,7 @@ const querydorminfo = `
     ) AS rooms
   FROM halls h
   LEFT JOIN rooms r ON h.id = r.hall_id
-  GROUP BY h.id, h.name, h.zip, h.gender_inclusive, h.infrastructure, h.pictures;
+  GROUP BY h.id, h.name, h.zip, h.gender_inclusive, h.infrastructure, h.picture;
 `;
 
 module.exports = { querydorminfo };

@@ -98,7 +98,7 @@ export default function DormApplication() {
     }
 
     try {
-      const res = await fetch(`http://${ip}:3000/authorized/student/getRank`, {
+      const res = await fetch(`http://${ip}:80/authorized/student/getRank`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -175,7 +175,7 @@ export default function DormApplication() {
           onPress: async () => {
             try {
               const res = await fetch(
-                `http://${ip}:3000/authorized/student/apply`,
+                `http://${ip}:80/authorized/student/apply`,
                 {
                   method: "POST",
                   headers: {

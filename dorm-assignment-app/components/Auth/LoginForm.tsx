@@ -23,7 +23,7 @@ export default function LoginForm({
     }
 
     try {
-      const res = await fetch(`http://${ip}:3000/auth/login`, {
+      const res = await fetch(`http://${ip}:80/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

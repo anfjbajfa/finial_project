@@ -56,7 +56,7 @@ export default function ApplicationDetail() {
         onPress: async () => {
           try {
             const res = await fetch(
-              `http://${ip}:3000/authorized/admin/acceptApplication`,
+              `http://${ip}:80/authorized/admin/acceptApplication`,
               {
                 method: "POST",
                 headers: {
@@ -128,7 +128,7 @@ export default function ApplicationDetail() {
         onPress: async () => {
           try {
             const res = await fetch(
-              `http://${ip}:3000/authorized/admin/rejectApplication`,
+              `http://${ip}:80/authorized/admin/rejectApplication`,
               {
                 method: "POST",
                 headers: {

@@ -69,7 +69,7 @@ export default function RegisterForm({ onBack }: { onBack: () => void }) {
     }
 
     try {
-      const res = await fetch(`http://${ip}:3000/auth/register`, {
+      const res = await fetch(`http://${ip}:80/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, age: parseInt(form.age, 10) }),
