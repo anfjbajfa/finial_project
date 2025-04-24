@@ -1,5 +1,5 @@
 const applyApplicationquery = `
-  INSERT INTO application (student_id, room_id)
+  INSERT INTO applications (student_id, room_id)
   VALUES (
     $1,
     (

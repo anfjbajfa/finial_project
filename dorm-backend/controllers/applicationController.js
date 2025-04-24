@@ -46,7 +46,7 @@ exports.getStudentApplications = async (req, res) => {
   a.apply_time,
   a.update_time,
   a.reason
-FROM application a
+FROM applications a
 JOIN rooms r ON a.room_id = r.id
 JOIN halls h ON r.hall_id = h.id
 JOIN users u ON a.student_id = u.id
@@ -82,7 +82,7 @@ exports.getAllApplications = async (req, res) => {
   u.ssn,
   a.update_time,
   a.reason
-FROM application a
+FROM applications a
 JOIN rooms r ON a.room_id = r.id
 JOIN halls h ON r.hall_id = h.id
 JOIN users u ON a.student_id = u.id;
@@ -100,7 +100,7 @@ exports.deleteStudentApplication = async (req, res) => {
   try {
     const result = await pool.query(
       `
-      DELETE FROM application WHERE student_id = $1;
+      DELETE FROM applications WHERE student_id = $1;
 
       `,
       [student_id]
@@ -122,7 +122,7 @@ exports.acceptApplication = async (req, res) => {
   try {
     const result = await pool.query(
       `
-      UPDATE application SET 
+      UPDATE applications SET 
         status = 'accept',
         reason = NULL,
         update_time = NOW()
@@ -147,7 +147,7 @@ exports.rejectApplication = async (req, res) => {
   try {
     const result = await pool.query(
       `
-      UPDATE application SET
+      UPDATE applications SET
         status = 'reject',
         reason = $2,
         update_time = NOW() 
