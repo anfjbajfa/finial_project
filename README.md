@@ -1,23 +1,23 @@
 # UWM Dormitory Application System
 
-> ⚠️ This application is intended for **mobile devices only** (iOS & Android).
+> This application is intended for **mobile devices only** (iOS & Android).
 
-## 📌 Overview
+## Overview
 
 This app is designed to help manage dormitory and applicant information for the University of Wisconsin–Madison (UWM). It aims to **reduce the time students spend searching for suitable dormitories** by streamlining the application and review process.
 
-- 🧑‍🎓 **Students** can register, log in, and apply for dormitories based on their preferences.
-- 🧑‍💼 **Administrators** can review applications and either **accept** or **reject** them.
+-  **Students** can register, log in, and apply for dormitories based on their preferences.
+-  **Administrators** can review applications and either **accept** or **reject** them.
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
-### 📦 Backend & Database
+### Backend & Database
 
 The backend and database are already deployed on the cloud — **you do not need to download them locally**.
 
-### 📱 Frontend (Expo-based)
+### Frontend (Expo-based)
 
 1.  Install the [Expo Go app](https://expo.dev/client) on your mobile device.
 
@@ -36,11 +36,11 @@ npm start
 
 5.  If scanning fails, you may need to **configure your firewall** to allow Expo through.
 
-> ✅ Once the app runs, you can try registering and logging in — you may use **any random data** during registration; there are no validation restrictions. However, please make sure the backend service is **running and accessible**, as it is hosted with a **4-hour time limit per session**.
+> Once the app runs, you can try registering and logging in — you may use **any random data** during registration; there are no validation restrictions. However, please make sure the backend service is **running and accessible**, as it is hosted with a **4-hour time limit per session**.
 
 ---
 
-### 🔐 Admin Credentials
+### Admin Credentials
 
 To view existing applications as an admin:
 
@@ -49,11 +49,11 @@ To view existing applications as an admin:
 
 ---
 
-## 🎥 Demo GIFs
+## Demo GIFs
 
 Below are some core features demonstrated as GIFs:
 
-### 👩‍🎓 Student Side
+### Student Side
 
 - **View Dorm Info**
 
@@ -71,7 +71,7 @@ Below are some core features demonstrated as GIFs:
 
   ![Get Rank](./getrank.gif)
 
-### 👨‍💼 Admin Side
+### Admin Side
 
 - **Admin Login**
 
